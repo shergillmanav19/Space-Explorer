@@ -1,13 +1,8 @@
-const getImagesFromAPI = async ({
-  start_date = "",
-  end_date = "",
-  count = "",
-  thumbs = "",
-}) => {
+const getImagesFromAPI = async ({ count = "" }) => {
   let data = { status: "loading", data: {} };
   try {
     const response = await fetch(
-      `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}&count=${count}&start_date=${start_date}&end_date=${end_date}&thumbs=${thumbs}`
+      `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}&count=${count}`
     );
     const response_data = await response.json();
     data["status"] = "Success";
