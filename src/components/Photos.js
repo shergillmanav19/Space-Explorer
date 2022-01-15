@@ -10,14 +10,19 @@ function Photos({ photos, like, unlike, contains }) {
         .map((photo, i) => (
           <Box
             maxW="md"
-            minH="md"
             borderWidth="1px"
             borderRadius="lg"
             overflow="hidden"
             key={i}
             margin="10px"
           >
-            <Image src={photo.url} alt="Cool image here" objectFit="cover" />
+            <Image
+              src={photo.url}
+              alt="Cool image here"
+              backgroundSize="100%"
+              objectFit="cover"
+              boxSize="md"
+            />
             <Box p="6">
               <Box
                 mt="1"
