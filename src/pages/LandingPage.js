@@ -14,7 +14,7 @@ import Error from "../components/Error";
 
 function LandingPage() {
   const [error, setError] = useState("");
-  const [buttonActive, setButtonActive] = useState("like");
+  const [buttonActive, setButtonActive] = useState("explore");
   const [inputValue, setInputValue] = useState("");
 
   const [explorePhotosParams, setExplorePhotosParams] = useState({
