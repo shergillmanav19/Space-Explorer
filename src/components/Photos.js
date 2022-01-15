@@ -36,9 +36,18 @@ function Photos({ photos, like, unlike, contains }) {
               <Badge bg="lightpink">{photo.date}</Badge>
               <Box>{photo.explanation}</Box>
               {contains(photo.url) ? (
-                <Button onClick={() => unlike(photo.url)}> Unlike</Button>
+                <Button
+                  bg="#BDD5EA"
+                  _hover={{ bg: "red.400", color: "white" }}
+                  onClick={() => unlike(photo.url)}
+                >
+                  {" "}
+                  Unlike
+                </Button>
               ) : (
                 <Button
+                  bg="#BDD5EA"
+                  _hover={{ bg: "blue.400", color: "white" }}
                   onClick={() =>
                     like(photo.title, photo.explanation, photo.url, photo.date)
                   }
