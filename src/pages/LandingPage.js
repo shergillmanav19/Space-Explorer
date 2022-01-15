@@ -6,7 +6,7 @@ import Error from "../components/Error";
 
 function LandingPage() {
   const [error, setError] = useState("");
-  const [buttonActive, setButtonActive] = useState("explore");
+  const [buttonActive, setButtonActive] = useState("like");
   const [explorePhotosParams, setExplorePhotosParams] = useState({
     count: 20,
   });
@@ -17,7 +17,7 @@ function LandingPage() {
     // Next line logic represents "sort" of a refresh button
     if (buttonName == "explore") {
       setExplorePhotosParams({
-        count: countRef.current.value,
+        count: explorePhotosParams.count,
       });
     }
   }
@@ -50,7 +50,10 @@ function LandingPage() {
         </HStack>
       </VStack>
       {buttonActive == "explore" ? (
-        <ExplorePhotos params={explorePhotosParams} />
+        <>
+          {console.log(explorePhotosParams)}
+          <ExplorePhotos params={explorePhotosParams} />
+        </>
       ) : (
         <LikedPhotos />
       )}

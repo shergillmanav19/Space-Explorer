@@ -1,16 +1,18 @@
 import {
+  Badge,
   Box,
+  Button,
   Center,
-  Divider,
   Flex,
   Image,
   Spinner,
-  Text,
   VStack,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import { PhoneIcon, AddIcon, WarningIcon } from "@chakra-ui/icons";
+import { WarningIcon } from "@chakra-ui/icons";
 import getImagesFromAPI from "../api/Api";
+import { useLikedPhotos } from "../hooks/useLikedPhotos";
+import Photos from "./Photos";
 
 function ExplorePhotos({ params }) {
   const [photos, setPhotos] = useState([]);
@@ -48,35 +50,7 @@ function ExplorePhotos({ params }) {
           <Box bg="lightpink" padding="5px" borderRadius="5px">
             <WarningIcon /> Videos have been filtered out
           </Box>
-          <Flex flexWrap="wrap" justifyContent="center" alignItems="center">
-            {photos
-              .filter((photo) => photo.url && photo.url.includes("jpg"))
-              .map((photo, i) => (
-                <Box
-                  maxW="md"
-                  minH="md"
-                  borderWidth="1px"
-                  borderRadius="lg"
-                  overflow="hidden"
-                  key={i}
-                  margin="10px"
-                >
-                  <Image src={photo.url} alt="Cool image here" />
-                  <Box p="6">
-                    <Box
-                      mt="1"
-                      fontWeight="semibold"
-                      as="h4"
-                      lineHeight="tight"
-                      isTruncated
-                    >
-                      {photo.title}
-                    </Box>
-                    <Box>{photo.explanation}</Box>
-                  </Box>
-                </Box>
-              ))}
-          </Flex>
+          <Photos photos={photos} />
         </VStack>
       )}
     </div>
