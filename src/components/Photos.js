@@ -2,9 +2,7 @@ import { Badge, Box, Button, Flex, Image } from "@chakra-ui/react";
 import React from "react";
 import { useLikedPhotos } from "../hooks/useLikedPhotos";
 
-function Photos({ photos }) {
-  const { like, unlike, contains } = useLikedPhotos();
-
+function Photos({ photos, like, unlike, contains }) {
   return (
     <Flex flexWrap="wrap" justifyContent="center" alignItems="center">
       {photos

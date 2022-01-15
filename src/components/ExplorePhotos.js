@@ -17,6 +17,7 @@ import Photos from "./Photos";
 function ExplorePhotos({ params }) {
   const [photos, setPhotos] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { like, unlike, contains } = useLikedPhotos();
 
   useEffect(() => {
     setLoading(true);
@@ -50,7 +51,12 @@ function ExplorePhotos({ params }) {
           <Box bg="lightpink" padding="5px" borderRadius="5px">
             <WarningIcon /> Videos have been filtered out
           </Box>
-          <Photos photos={photos} />
+          <Photos
+            photos={photos}
+            like={like}
+            unlike={unlike}
+            contains={contains}
+          />
         </VStack>
       )}
     </div>
