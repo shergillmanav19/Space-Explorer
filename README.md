@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Space Explorer is a web-app built with React framework using JavaScript. The application stores data in the user's browser's local storage to ensure their liked images persist between sessions. 
 
-Space Explorer uses Chakra UI components instead of generic HTML tag such as <button> or <div>. Using Chakra UI enabled more focus on functionality rather than also taking care of styling using CSS.
+Space Explorer uses Chakra UI components instead of generic HTML tag such as <button>. Using Chakra UI enabled more focus on functionality rather than also taking care of styling using CSS.
 
 ### Features of Space Explorer
 
@@ -15,6 +15,8 @@ Space Explorer uses Chakra UI components instead of generic HTML tag such as <bu
 * The explore tab contains random images that a user might add to their liked pictures
 * Liked pictures tab contains user's liked photos.
 * Everytime explore is refreshed, user see's completly random images from the NASA's API.
+* User is able to unlike any picture they don't like in their liked picture; thus, removing it from the page. 
+* Unlike all button helps to remove all liked pictures from the page.
 
 ### Improvements to be made
 
