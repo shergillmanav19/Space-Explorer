@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Space Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). The project aims to help you explore your interest in astronomy pictures. The data is being pulled from NASA's API. 
 
-## Available Scripts
+## How it works
 
-In the project directory, you can run:
+Space Explorer is a web-app built with React framework using JavaScript. The application stores data in the user's browser's local storage to ensure their liked images persist between sessions. 
 
-### `npm start`
+Space Explorer uses Chakra UI components instead of generic HTML tag such as <button> or <div>. Using Chakra UI enabled more focus on functionality rather than also taking care of styling using CSS.
 
-Runs the app in the development mode.\
+### Features of Space Explorer
+
+* Upon entering the site user are shown random 20 pictures of space by default. 
+* Users are able to select how many pictures they want to see. The range is between 50 and 5.
+* The explore tab contains random images that a user might add to their liked pictures
+* Liked pictures tab contains user's liked photos.
+* Everytime explore is refreshed, user see's completly random images from the NASA's API.
+
+### Improvements to be made
+
+* Better search functionality, user's should be able to put dates as well
+* Storage of images in a database
+* More appealing UI
+
+## How to run app on your machine
+
+1) Clone the repository by click on "Code" and then copying the https link and running the command "git clone [HTTP-LINK-HERE]" in your terminal
+2) Open the repository usng VSCode and open up a terminal.
+3) Now run "npm ci" to download node_modules used by the project
+4) Lastly, run "npm start" and the application should be available on "localhost:3000"
+
+The previous steps run the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+## How to run test cases on your machine
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1) Run the command "npm test" in your terminal. This should show 6 test suites.
+2) If no test suites show up after running "npm test", the instruction in your console will tell you to press 'a' key on your keyboard. Pressing 'a' will run all of the test suites.
