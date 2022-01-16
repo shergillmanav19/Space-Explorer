@@ -23,7 +23,9 @@ describe("ExplorePhotos", () => {
           screen.getByText("Videos have been filtered out")
         ).toBeInTheDocument();
       },
-      { timeout: 5000 }
+      {
+        timeout: 5000,
+      }
     );
   });
 });

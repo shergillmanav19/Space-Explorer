@@ -48,6 +48,7 @@ describe("useLikedPhotos", () => {
       expect(result.current.likedPhotos).toHaveLength(1);
     });
   });
+
   describe("unlike", () => {
     it("should remove the liked photo from the local storage array", () => {
       const { result } = renderHook(() => useLikedPhotos());

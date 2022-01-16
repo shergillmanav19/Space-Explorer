@@ -1,5 +1,4 @@
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import LandingPage from "../LandingPage";
 
 describe("Landing page", () => {
@@ -11,7 +10,6 @@ describe("Landing page", () => {
 
   it("should render search bar if explore button active", () => {
     render(<LandingPage />);
-    // Explore button by default is active
     expect(screen.getByText("Search")).toBeInTheDocument();
   });
 });

@@ -12,17 +12,23 @@ function ExplorePhotos({ params }) {
 
   useEffect(() => {
     setLoading(true);
+    let isSubscribed = true;
     const fetchPhotos = async () => {
       try {
         let response = await getImagesFromAPI(params);
         response = await response.data;
-        setPhotos([...response]);
-        setLoading(false);
+        if (isSubscribed) {
+          setPhotos([...response]);
+          setLoading(false);
+        }
       } catch (e) {
-        console.warn(e);
+        if (isSubscribed) {
+          console.warn(e);
+        }
       }
     };
     fetchPhotos();
+    return () => (isSubscribed = false);
   }, [params]);
 
   return (

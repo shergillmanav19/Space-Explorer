@@ -1,11 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import { renderHook } from "@testing-library/react-hooks";
-import userEvent from "@testing-library/user-event";
-import { useState } from "react";
 import { act } from "react-dom/test-utils";
 import { useLikedPhotos } from "../../hooks/useLikedPhotos";
-import Error from "../Error";
 import LikedPhotos from "../LikedPhotos";
+
 describe("error", () => {
   it("should contain an unlike all button", () => {
     render(<LikedPhotos />);
