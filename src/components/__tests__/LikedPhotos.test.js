@@ -4,7 +4,7 @@ import { act } from "react-dom/test-utils";
 import { useLikedPhotos } from "../../hooks/useLikedPhotos";
 import LikedPhotos from "../LikedPhotos";
 
-describe("error", () => {
+describe("Liked photo", () => {
   it("should contain an unlike all button", () => {
     render(<LikedPhotos />);
     expect(document.querySelector("button")).toBeInTheDocument();

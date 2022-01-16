@@ -9,7 +9,7 @@ const params = {
 };
 let container = null;
 
-describe("ExplorePhotos", () => {
+describe("Explore Photos", () => {
   it("should show loading", () => {
     render(<ExplorePhotos params={params} />);
     expect(screen.getByText("Loading...")).toBeInTheDocument();
