@@ -17,6 +17,8 @@ Space Explorer uses Chakra UI components instead of generic HTML tag such as <bu
 * Everytime explore is refreshed, user see's completly random images from the NASA's API.
 * User is able to unlike any picture they don't like in their liked picture; thus, removing it from the page. 
 * Unlike all button helps to remove all liked pictures from the page.
+  
+### You might not see a picture you like ever again in the explore tab, so make sure to press the like buton 😼❤️ 
 
 ### Improvements to be made
 
