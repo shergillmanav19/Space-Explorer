@@ -1,4 +1,6 @@
-# Space Explorer ( URL => https://space-explorer-my-app.herokuapp.com/)
+# Space Explorer 
+
+# Accesss URL = https://space-explorer-my-app.herokuapp.com/ || NOTE: If website doesn't load on first try, please refresh as Heroku Dyno (place where website is deployed) takes some time to start up.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). The project aims to help you explore your interest in astronomy pictures. The data is being pulled from NASA's API. 
 
