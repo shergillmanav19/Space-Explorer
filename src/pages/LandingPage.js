@@ -25,7 +25,7 @@ function LandingPage() {
   function handleButtonClick(buttonName) {
     setButtonActive(buttonName);
     // Next line logic represents "sort" of a refresh button
-    if (buttonName == "explore") {
+    if (buttonName === "explore") {
       setExplorePhotosParams({
         count: explorePhotosParams.count,
       });
@@ -45,7 +45,7 @@ function LandingPage() {
 
   return (
     <>
-      <div class="banner">
+      <div className="banner">
         <Error myError={error} setError={setError} />
 
         <VStack marginTop="15px">
@@ -85,7 +85,7 @@ function LandingPage() {
           </HStack>
         </VStack>
       </div>
-      {buttonActive == "explore" ? (
+      {buttonActive === "explore" ? (
         <>
           <Center>
             <HStack marginTop="10px">

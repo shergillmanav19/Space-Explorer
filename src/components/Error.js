@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import {
   Alert,
@@ -24,7 +24,7 @@ function Error({ myError, setError }) {
           />
         </Alert>
       ) : (
-        ""
+        <></>
       )}
     </>
   );

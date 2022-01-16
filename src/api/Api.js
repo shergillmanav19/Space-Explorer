@@ -1,7 +1,7 @@
 const getImagesFromAPI = async ({ count = "" }) => {
   let data = { status: "loading", data: {} };
   try {
-    if (count == "") {
+    if (count === "") {
       count = 20;
     }
     const response = await fetch(
@@ -10,7 +10,6 @@ const getImagesFromAPI = async ({ count = "" }) => {
     const response_data = await response.json();
     data["status"] = "Success";
     data["data"] = response_data;
-    console.log(data);
     return data;
   } catch (e) {
     data["status"] = "Error";

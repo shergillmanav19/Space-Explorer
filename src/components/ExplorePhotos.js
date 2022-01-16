@@ -1,13 +1,4 @@
-import {
-  Badge,
-  Box,
-  Button,
-  Center,
-  Flex,
-  Image,
-  Spinner,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Center, Spinner, Text, VStack } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { WarningIcon } from "@chakra-ui/icons";
 import getImagesFromAPI from "../api/Api";
@@ -49,7 +40,10 @@ function ExplorePhotos({ params }) {
       ) : (
         <VStack marginTop="15px">
           <Box bg="lightpink" padding="5px" borderRadius="5px">
-            <WarningIcon /> Videos have been filtered out
+            <Text>
+              <WarningIcon />
+              Videos have been filtered out
+            </Text>
           </Box>
           <Photos
             photos={photos}

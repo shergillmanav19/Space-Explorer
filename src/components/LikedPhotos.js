@@ -1,4 +1,4 @@
-import { Box, Button, Flex } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import React from "react";
 import { useLikedPhotos } from "../hooks/useLikedPhotos";
 import Photos from "./Photos";

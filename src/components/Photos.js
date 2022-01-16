@@ -1,6 +1,5 @@
 import { Badge, Box, Button, Flex, Image } from "@chakra-ui/react";
 import React from "react";
-import { useLikedPhotos } from "../hooks/useLikedPhotos";
 
 function Photos({ photos, like, unlike, contains }) {
   return (
@@ -41,7 +40,6 @@ function Photos({ photos, like, unlike, contains }) {
                   _hover={{ bg: "red.400", color: "white" }}
                   onClick={() => unlike(photo.url)}
                 >
-                  {" "}
                   Unlike
                 </Button>
               ) : (

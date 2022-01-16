@@ -1,9 +1,18 @@
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 import useLocalStorage from "./useLocalStorage";
 export const useLikedPhotos = () => {
   const [likedPhotos, setLikedPhotos] = useLocalStorage(
     "user:liked_photos",
     []
+  );
+  const unlikeAll = () => {
+    setLikedPhotos([]);
+  };
+  const contains = useCallback(
+    (url) => {
+      return likedPhotos.some((photo) => photo.url === url);
+    },
+    [likedPhotos]
   );
   const like = useCallback(
     (title, explanation, url, date) => {
@@ -15,17 +24,7 @@ export const useLikedPhotos = () => {
         ]);
       }
     },
-    [likedPhotos]
-  );
-
-  const unlikeAll = () => {
-    setLikedPhotos([]);
-  };
-  const contains = useCallback(
-    (url) => {
-      return likedPhotos.some((photo) => photo.url === url);
-    },
-    [likedPhotos]
+    [likedPhotos, contains, setLikedPhotos]
   );
   const unlike = (url) => {
     setLikedPhotos(likedPhotos.filter((photo) => photo.url !== url));
