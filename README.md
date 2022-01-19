@@ -32,8 +32,11 @@ Space Explorer uses Chakra UI components instead of generic HTML tag such as ```
 
 1) Clone the repository by clicking on "Code" dropdown on Github and then copying the https link and running the command ```git clone [HTTP-LINK-HERE]``` in your terminal.
 2) Open the repository usng VSCode and open up a terminal.
-3) Make sure you have ```Node version 16.x.x +```. Now run ```npm ci``` to download node_modules used by the project.
-4) Lastly, run ```npm start``` and the application should be available on ```localhost:3000```.
+3) You need to create a NASA API key for yourself. The steps are:
+  * Go to ```https://api.nasa.gov``` and create a key.
+  * Now replace the ```${process.env.REACT_APP_NASA_API_KEY}``` in ```API.js``` with your key.
+4) Make sure you have ```Node version 16.x.x +```. Now run ```npm ci``` to download node_modules used by the project.
+5) Lastly, run ```npm start``` and the application should be available on ```localhost:3000```.
 
 The previous steps run the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
